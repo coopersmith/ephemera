@@ -36,10 +36,10 @@ fetch(API_URL, {
       infoOverlay.className = 'info-overlay';
   
       const venueElement = document.createElement('span');
-      venueElement.textContent = `Venue: ${venue}`;
+      venueElement.textContent = `${venue}`;
   
       const dateElement = document.createElement('span');
-      dateElement.textContent = `Date: ${date}`;
+      dateElement.textContent = `${date}`;
   
       infoOverlay.appendChild(venueElement);
       infoOverlay.appendChild(dateElement);

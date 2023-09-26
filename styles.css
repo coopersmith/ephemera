@@ -1,37 +1,46 @@
 #gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
-  
-  .img-wrapper {
-    position: relative;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .img-wrapper img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  .info-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 1.0);
-    color: rgb(0, 0, 0);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .img-wrapper:hover .info-overlay {
-    display: flex;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.img-wrapper {
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10%;
+  object-fit: cover;
+}
+
+.info-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  color: black;
+  opacity: 0;
+  transition: opacity 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wrapper:hover .info-overlay {
+  opacity: 1;
+}
+
+.info-overlay span {
+  display: block;
+  text-align: center;
+}

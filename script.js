@@ -1,4 +1,4 @@
-// Your API details remain unchanged
+// Airtable
 const API_URL = 'https://api.airtable.com/v0/appSDh51MiE2vHKEZ/tbl6Y7weXgHGBUO3S';
 const API_KEY = 'key0aOgJtjQGR65d3';
 

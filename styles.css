@@ -44,3 +44,88 @@
   display: block;
   text-align: center;
 }
+
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Takes the full height of the viewport */
+  font-size: 20px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);  /* Light grey */
+  border-radius: 50%;  /* Circular shape */
+  border-top: 4px solid black;  /* Black for the spinning section */
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 50px auto;  /* Centers the spinner */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%; }
+body {
+  background-color: #FFF;
+  font-size: 1.0em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Inter';
+  color: #000; }
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+h1 {
+	text-align: center;
+  padding-top: 2%;
+	font-size: 6.4rem;
+	line-height: 1.0;
+  color: #000;
+  font-family: "ivymode", sans-serif;
+font-weight: 200;
+font-style: normal;
+}
+
+h2 {
+  text-align: center;
+	font-size: 2.4rem;
+	line-height: 1.0;
+    font-weight: normal;
+    color: #000;
+    margin-top: -2%;
+}
+
+h3, h4 {
+	text-align: center;
+  font-size: 2.4rem;
+    font-weight: 200;
+    font-family: 'ivymode';
+    color: #000;
+    line-height: 1.0;
+    text-align: left;
+    padding-right: 0px;
+}
+
+h6 {
+	font-size: 1.2em;
+    color: #3B6CA6;
+}
+
+p {
+  
+  }

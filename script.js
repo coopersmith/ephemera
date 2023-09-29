@@ -2,6 +2,11 @@
 const API_URL = 'https://api.airtable.com/v0/appSDh51MiE2vHKEZ/tbl6Y7weXgHGBUO3S';
 const API_KEY = 'key0aOgJtjQGR65d3';
 
+// Function to hide the loading spinner
+function hideLoadingIndicator() {
+  document.getElementById('loading').style.display = 'none';
+}
+
 fetch(API_URL, {
     headers: {
       'Authorization': `Bearer ${API_KEY}`
@@ -51,7 +56,11 @@ fetch(API_URL, {
       console.warn('Image not found for record:', record.id);
     }
   });
+  // Hide the loading spinner after the gallery has been populated
+  hideLoadingIndicator();
 })
 .catch(error => {
   console.error('Error fetching data:', error);
+  // Also hide the loading spinner in case of an error, so the user isn't left with a perpetual loading screen
+  hideLoadingIndicator();
 });

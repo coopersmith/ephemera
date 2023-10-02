@@ -29,6 +29,7 @@ fetch(API_URL, {
     if (record.fields.images && record.fields.images.length > 0) {
       const imageUrl = record.fields.images[0].url;
       const venue = record.fields.venue || 'Unknown Venue';
+      const location = record.fields.location || 'Unknown Location';  // New line for location
       const date = record.fields.date || 'Unknown Date';
   
       const imgWrapper = document.createElement('div');
@@ -42,11 +43,15 @@ fetch(API_URL, {
   
       const venueElement = document.createElement('span');
       venueElement.textContent = `${venue}`;
-  
+      
+      const locationElement = document.createElement('span');  // New element for location
+      locationElement.textContent = `${location}`;
+
       const dateElement = document.createElement('span');
       dateElement.textContent = `${date}`;
   
       infoOverlay.appendChild(venueElement);
+      infoOverlay.appendChild(locationElement);  // New line to append location
       infoOverlay.appendChild(dateElement);
   
       imgWrapper.appendChild(imgElement);

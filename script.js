@@ -1,6 +1,6 @@
 // Airtable
 const API_URL = 'https://api.airtable.com/v0/appSDh51MiE2vHKEZ/tbl6Y7weXgHGBUO3S';
-const API_KEY = 'key0aOgJtjQGR65d3';
+const PAT = 'patOJA1hglsTmpatzZ0y33NK1Bcv1C.1953af55ba439e9fb730f6848fe02005a35db5b02f29efe7781bf6aa04ac387b';
 
 // Function to hide the loading spinner
 function hideLoadingIndicator() {
@@ -9,7 +9,7 @@ function hideLoadingIndicator() {
 
 fetch(API_URL, {
     headers: {
-      'Authorization': `Bearer ${API_KEY}`
+      'Authorization': `Bearer ${PAT}`
     }
 })
 .then(response => response.json())
